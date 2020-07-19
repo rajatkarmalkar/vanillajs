@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Location Guru Assignment</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+
+<link rel="stylesheet" href="css/style.css">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="js/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="js/bootstrap.min.js"></script> 
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+ $(document).ready(function () {
+  //called when key is pressed in textbox
+  $(".contact").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+
+               return false;
+           
+    }
+   });
+});
+
+</script>
+
+ <!-- <script type="text/javascript">
+   function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+
+                   $("#validEmailid").css("display", "block");
+                               return false;
+       }
+        else{
+
+          $("#validEmailid").css("display", "none");
+                  return true;
+        }
+
+
+
+}
+</script>  -->
+
+</head>
+<body>
+
+<div id="wrapper">
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+  <!-- Links -->
+  <!-- <ul class="navbar-nav"> 
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li>
+  </ul>-->
+
+</nav>
+</div>
+
+
+<div class="container">
+       <p> 
+        <label for="newtask">User Details</label>
+
+      </p>
+      
+<form  name="myForm" action="JAVASCRIPT: addTask()"  onsubmit="return validateForm()">
+<div class="row">
+
+
+<div class="col-md-4 col-sm-4 col-xs-12">
+  <input id="fname" class="newtask" type="text" name="fname" placeholder="First name">
+  <p id="validFname">First name cannot be empty</p>
+  <input id="lname" class="newtask" type="text" name="lname" placeholder="Last name">
+  <p id="validLname">Last name cannot be empty</p>
+</div>  
+<div class="col-md-4 col-sm-4 col-xs-12">
+ <input id="contact" class="newtask contact" type="text" maxlength="10" name="contact" placeholder="Contact Number">
+ <p id="validContact">Contact cannot be empty</p>
+  <input id="email" class="newtask" type="text" name="email"  placeholder="Email">
+  <p id="validEmail">Email cannot be empty</p>
+  <p id="validEmailid">Invalid Email</p>
+ <button>Add</button>
+</div>  
+<div class="col-md-4 col-sm-4 col-xs-12">
+<textarea id="address" class="newtask" name="address" placeholder="Address"></textarea>  
+<p id="validAddress">Address cannot be empty</p>
+</div>  
+</div>
+</form>
+      <!-- <h3>Todo</h3> -->
+      <table cellpadding="5" cellspacing="5">
+     
+       <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Contact Number</th>
+      <th>Email ID</th>
+      <th>Actions</th>
+      </thead>
+       <tbody id="tasks">
+   
+      </tbody>
+      </table>
+     
+    
+
+
+</div>
+</body>
+
+  <script type="text/javascript" src="js/script.js"></script>
+
+
+ <link rel="stylesheet" href="css/font-awesome.min.css">
+</html>
